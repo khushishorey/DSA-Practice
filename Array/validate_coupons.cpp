@@ -28,51 +28,56 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
-public:
-    vector<string> validateCoupons(vector<string>& code,
-                                   vector<string>& businessLine,
-                                   vector<bool>& isActive) {
+// class Solution {
+// public:
+//     vector<string> validateCoupons(vector<string>& code,
+//                                    vector<string>& businessLine,
+//                                    vector<bool>& isActive) {
 
-        int n = code.size();
+//         int n = code.size();
 
-        unordered_map<string, int> businessPriority;
-        businessPriority["electronics"] = 1;
-        businessPriority["grocery"]     = 2;
-        businessPriority["pharmacy"]    = 3;
-        businessPriority["restaurant"]  = 4;
+//         unordered_map<string, int> businessPriority;
+//         businessPriority["electronics"] = 1;
+//         businessPriority["grocery"]     = 2;
+//         businessPriority["pharmacy"]    = 3;
+//         businessPriority["restaurant"]  = 4;
 
-        vector<pair<int, string>> validCoupons;
+//         vector<pair<int, string>> validCoupons;
 
-        for (int i = 0; i < n; i++) {
+//         for (int i = 0; i < n; i++) {
 
-            if (!isActive[i]) continue;
+//             if (!isActive[i]) continue;
 
-            if (businessPriority.find(businessLine[i]) == businessPriority.end())
-                continue;
+//             if (businessPriority.find(businessLine[i]) == businessPriority.end())
+//                 continue;
 
-            if (code[i].empty()) continue;
+//             if (code[i].empty()) continue;
 
-            bool isValidCode = true;
-            for (char c : code[i]) {
-                if (!isalnum(c) && c != '_') {
-                    isValidCode = false;
-                    break;
-                }
-            }
+//             bool isValidCode = true;
+//             for (char c : code[i]) {
+//                 if (!isalnum(c) && c != '_') {
+//                     isValidCode = false;
+//                     break;
+//                 }
+//             }
 
-            if (!isValidCode) continue;
+//             if (!isValidCode) continue;
 
-            validCoupons.push_back({businessPriority[businessLine[i]], code[i]});
-        }
+//             validCoupons.push_back({businessPriority[businessLine[i]], code[i]});
+//         }
 
-        sort(validCoupons.begin(), validCoupons.end());
+//         sort(validCoupons.begin(), validCoupons.end());
 
-        vector<string> result;
-        for (auto &p : validCoupons) {
-            result.push_back(p.second);
-        }
+//         vector<string> result;
+//         for (auto &p : validCoupons) {
+//             result.push_back(p.second);
+//         }
 
-        return result;
-    }
-};
+//         return result;
+//     }
+// };
+
+int main() {
+    cout << 0 % 2 <<endl;
+    return 0;
+}
