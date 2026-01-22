@@ -10,6 +10,7 @@ int main() {
         if(x != 1) cout << "YES" <<endl;
         else if(k == 1) cout << "NO" << endl;
         
+        
     }
     return 0;
 } 
