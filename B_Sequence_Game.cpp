@@ -13,19 +13,21 @@ int main() {
         }
         arr.push_back(brr[0]);
         for(int i = 1; i < n; i++) {
-            if(brr[i] > brr[i-1]) {
-                arr.push_back(brr[i]);
-            }
-            else if(brr[i] < brr[i-1]) {
-                arr.push_back(brr[i]);
-                arr.push_back(brr[i]);
-            }
+           if(brr[i] >= brr[i-1]) {
+            arr.push_back(brr[i]);
+           }
+           else {
+            arr.push_back(brr[i]);
+            arr.push_back(brr[i]);
+           }
         }
 
         cout << arr.size() << endl;
         for(auto x : arr) {
             cout << x << " ";
         }
+        cout << endl;
+       
 
     }
     return 0;
